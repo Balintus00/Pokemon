@@ -18,19 +18,18 @@ import javax.inject.Qualifier
 
 @Module
 @InstallIn(SingletonComponent::class)
-@Suppress("unused")
-class ProvisionModule {
+class PokemonProvisionModule {
 
     @Provides
     @BaseUrl
     @Suppress("FunctionOnlyReturningConstant")
-    internal fun provideBaseUrl(): String = ""
+    fun provideBaseUrl(): String = ""
 
     @Provides
-    internal fun provideHttpClientEngineFactory(): HttpClientEngineFactory<*> = OkHttp
+    fun provideHttpClientEngineFactory(): HttpClientEngineFactory<*> = OkHttp
 
     @Provides
-    internal fun provideHttpClient(): HttpClient = HttpClient {
+    fun provideHttpClient(): HttpClient = HttpClient {
         install(ContentNegotiation) {
             json(
                 Json {

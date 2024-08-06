@@ -10,7 +10,8 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
 composeBom = "2024.04.01"
-compose-navigation = "2.7.7"
+compose-navigation = "2.8.0-beta06"
+compose-navigation-hilt = "1.2.0"
 ksp = "1.9.0-1.0.13"
 ktor = "2.3.12"
 room = "2.6.1"
@@ -31,6 +32,7 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 compose-coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+compose-navigation-hilt = { module  = "androidx.hilt:hilt-navigation-compose", version.ref = "compose-navigation-hilt" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module  = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

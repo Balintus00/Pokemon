@@ -14,20 +14,20 @@ import io.github.balintus00.pokemon.repository.data.RemotePokemonDataSource
 @Module
 @InstallIn(SingletonComponent::class)
 @Suppress("unused")
-abstract class BindingModule {
+abstract class PokemonBindingModule {
 
     @Binds
-    internal abstract fun bindPokemonRepository(
+    abstract fun bindPokemonRepository(
         defaultPokemonRepository: DefaultPokemonRepository,
     ): PokemonRepository
 
     @Binds
-    internal abstract fun bindPersistentPokemonDataSource(
+    abstract fun bindPersistentPokemonDataSource(
         roomPersistentPokemonDataSource: RoomPersistentPokemonDataSource,
     ) : PersistentPokemonDataSource
 
     @Binds
-    internal abstract fun bindRemotePokemonDataSource(
+    abstract fun bindRemotePokemonDataSource(
         ktorRemotePokemonDataSource: KtorRemotePokemonDataSource,
     ) : RemotePokemonDataSource
 }

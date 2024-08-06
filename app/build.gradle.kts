@@ -65,6 +65,7 @@ dependencies {
 
     implementation(libs.androidx.compose.navigation)
     implementation(libs.compose.coil)
+    implementation(libs.compose.navigation.hilt)
     implementation(libs.hilt.android)
     implementation(libs.ktor.client.contentNegotiation)
     implementation(libs.ktor.client.core)
