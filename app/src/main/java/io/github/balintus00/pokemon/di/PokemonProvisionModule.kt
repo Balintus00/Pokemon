@@ -28,7 +28,7 @@ class PokemonProvisionModule {
     @Provides
     @BaseUrl
     @Suppress("FunctionOnlyReturningConstant")
-    fun provideBaseUrl(): String = ""
+    fun provideBaseUrl(): String = "https://pokeapi.co/api/v2"
 
     @Provides
     fun provideHttpClientEngineFactory(): HttpClientEngineFactory<*> = OkHttp
