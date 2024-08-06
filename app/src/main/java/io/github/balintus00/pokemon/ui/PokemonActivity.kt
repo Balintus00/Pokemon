@@ -1,4 +1,4 @@
-package io.github.balintus00.pokemon
+package io.github.balintus00.pokemon.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,9 +11,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 import io.github.balintus00.pokemon.ui.theme.PokemonTheme
+import io.github.balintus00.pokemon.viewlogic.PokemonListViewModel
 
-class MainActivity : ComponentActivity() {
+@AndroidEntryPoint
+class PokemonActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,7 +35,11 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier,
+    viewModel: PokemonListViewModel = viewModel(),
+) {
     Text(
         text = "Hello $name!",
         modifier = modifier
