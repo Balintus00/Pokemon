@@ -1,10 +1,15 @@
 package io.github.balintus00.pokemon.di
 
+import android.content.Context
 import android.util.Log
+import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import io.github.balintus00.pokemon.data.disk.AppDatabase
+import io.github.balintus00.pokemon.data.disk.CaughtPokemonDao
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngineFactory
 import io.ktor.client.engine.okhttp.OkHttp
@@ -53,8 +58,7 @@ class PokemonProvisionModule {
         }
     }
 
-// TODO
-/*    @Provides
+    @Provides
     fun provideAppDatabase(
         @ApplicationContext context: Context,
     ): AppDatabase = Room.databaseBuilder(
@@ -64,7 +68,8 @@ class PokemonProvisionModule {
     ).build()
 
     @Provides
-    fun providePokemonDao(database: AppDatabase): PokemonDao = database.pokemonDao()*/
+    fun provideCaughtPokemonDao(database: AppDatabase): CaughtPokemonDao =
+        database.caughtPokemonDao()
 }
 
 @Qualifier
