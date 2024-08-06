@@ -24,7 +24,7 @@ class ProvisionModule {
     @Provides
     @BaseUrl
     @Suppress("FunctionOnlyReturningConstant")
-    internal fun provideBaseUrl(): String = "https://the-one-api.dev/v2"
+    internal fun provideBaseUrl(): String = ""
 
     @Provides
     internal fun provideHttpClientEngineFactory(): HttpClientEngineFactory<*> = OkHttp
@@ -65,7 +65,7 @@ class ProvisionModule {
     ).build()
 
     @Provides
-    fun provideCharacterDao(database: AppDatabase): CharacterDao = database.characterDao()*/
+    fun providePokemonDao(database: AppDatabase): PokemonDao = database.pokemonDao()*/
 }
 
 @Qualifier
